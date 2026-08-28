@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#020817" />
+  <meta name="description" content="Play NextDungeon in your browser." />
+  <title>Play NextDungeon</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <header class="game-header">
+    <a class="back-link" href="../" aria-label="Back to NextDungeon home">← Home</a>
+    <div class="game-brand"><span>⚔</span><strong>NEXT<span>DUNGEON</span></strong></div>
+    <div class="game-actions">
+      <button id="pause-btn" type="button" aria-label="Pause game">Ⅱ</button>
+      <button id="sound-btn" type="button" aria-label="Toggle sound">🔊</button>
+      <button id="fullscreen-btn" type="button" aria-label="Enter fullscreen">⛶</button>
+    </div>
+  </header>
+
+  <main class="game-page">
+    <section class="game-frame" aria-label="NextDungeon playable game">
+      <div id="game-container"></div>
+
+      <div id="start-panel" class="start-panel">
+        <div class="panel-card">
+          <div class="mini-logo">NEXT <span>DUNGEON</span></div>
+          <h1>Dungeon Demo</h1>
+          <p>Defeat the monsters, collect the coins, then reach the portal.</p>
+          <button id="start-game" type="button">▶ Enter Dungeon</button>
+          <small>Desktop: A/D or ←/→ · X/Space jump · Z attack</small>
+        </div>
+      </div>
+
+      <div id="rotate-overlay" class="rotate-overlay" aria-hidden="true">
+        <div>↻</div>
+        <strong>Rotate your phone</strong>
+        <span>NextDungeon plays best in landscape.</span>
+      </div>
+
+      <div class="mobile-controls" aria-label="Touch controls">
+        <div class="move-controls">
+          <button class="control-btn" id="left-btn" type="button" aria-label="Move left">◀</button>
+          <button class="control-btn" id="right-btn" type="button" aria-label="Move right">▶</button>
+        </div>
+        <div class="action-controls">
+          <button class="control-btn jump-btn" id="jump-btn" type="button" aria-label="Jump">X<br><small>JUMP</small></button>
+          <button class="control-btn attack-btn" id="attack-btn" type="button" aria-label="Attack">Z<br><small>ATTACK</small></button>
+        </div>
+      </div>
+    </section>
+
+    <p class="game-tip">The game keeps a fixed 16:9 world and scales to fit your device without stretching the artwork.</p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
