@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020b1d" />
+  <meta name="description" content="NextDungeon — Explore, Fight, Loot, Survive." />
+  <title>NextDungeon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="viewport" aria-label="NextDungeon home page">
+    <section class="stage" id="home">
+      <img
+        class="locked-design"
+        src="assets/nextdungeon-home.webp"
+        width="1536"
+        height="1024"
+        alt="NextDungeon home page — Explore, Fight, Loot, Survive"
+        draggable="false"
+      />
+
+      <!-- Invisible interaction zones preserve the approved artwork exactly. -->
+      <a class="hotspot home-link" href="#home" aria-label="Home"></a>
+      <a class="hotspot nav-play-link" href="#demo" aria-label="Play Game"></a>
+      <a class="hotspot about-link" href="#" aria-label="About"></a>
+      <a class="hotspot leaderboard-link" href="#" aria-label="Leaderboard"></a>
+      <a class="hotspot contact-link" href="#" aria-label="Contact"></a>
+      <a class="hotspot play-now-link" href="#demo" aria-label="Play Now"></a>
+      <a class="hotspot hero-play-link" href="#demo" aria-label="Play Game"></a>
+      <button class="hotspot trailer-link" type="button" aria-label="Watch Trailer" data-message="Trailer will be connected in the next stage."></button>
+      <button class="hotspot demo-link" id="demo" type="button" aria-label="Play Demo" data-message="The playable 2D dungeon demo will be connected here next."></button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
