@@ -26,6 +26,18 @@ if (menuToggle && mainNav) {
   });
 }
 
+// The homepage stays responsive while the game runs on its own fixed 16:9 viewport.
+document.querySelectorAll('a[href="#demo"]').forEach((link) => {
+  link.setAttribute('href', 'play/');
+});
+
+document.querySelectorAll('.demo-button, .preview-play').forEach((button) => {
+  button.removeAttribute('data-message');
+  button.addEventListener('click', () => {
+    window.location.href = 'play/';
+  });
+});
+
 document.querySelectorAll('[data-message]').forEach((element) => {
   element.addEventListener('click', () => {
     window.alert(element.dataset.message);
