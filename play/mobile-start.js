@@ -4,16 +4,21 @@
   if (!startButton || !frame) return;
 
   const isTouchDevice = () => window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  const isIPhone = () => /iPhone|iPod/i.test(navigator.userAgent);
 
   startButton.addEventListener('click', async () => {
     if (!isTouchDevice()) return;
 
-    try {
-      if (!document.fullscreenElement && frame.requestFullscreen) {
-        await frame.requestFullscreen({ navigationUI: 'hide' });
+    // iPhone Safari has its own dynamic visual viewport. Forcing element fullscreen
+    // can cause a second resize while the game starts, so iPhone stays in exact FIT mode.
+    if (!isIPhone()) {
+      try {
+        if (!document.fullscreenElement && frame.requestFullscreen) {
+          await frame.requestFullscreen({ navigationUI: 'hide' });
+        }
+      } catch (_) {
+        // Normal Phaser FIT mode remains the fallback.
       }
-    } catch (_) {
-      // Fullscreen support varies by mobile browser; normal FIT mode remains the fallback.
     }
 
     try {
