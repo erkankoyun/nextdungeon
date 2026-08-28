@@ -1,7 +1,29 @@
-const lockedDesign = document.getElementById('locked-design');
+const imageParts = window.NEXTDUNGEON_IMAGE_PARTS;
 
-if (lockedDesign && Array.isArray(window.NEXTDUNGEON_IMAGE_PARTS)) {
-  lockedDesign.src = `data:image/avif;base64,${window.NEXTDUNGEON_IMAGE_PARTS.join('')}`;
+if (Array.isArray(imageParts)) {
+  const approvedArtwork = `data:image/avif;base64,${imageParts.join('')}`;
+  document.querySelectorAll('.source-art').forEach((image) => {
+    image.src = approvedArtwork;
+  });
+}
+
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
 }
 
 document.querySelectorAll('[data-message]').forEach((element) => {
