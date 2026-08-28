@@ -2,37 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#020b1d" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#020817" />
   <meta name="description" content="NextDungeon — Explore, Fight, Loot, Survive." />
   <title>NextDungeon</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="viewport" aria-label="NextDungeon home page">
-    <section class="stage" id="home">
-      <img
-        class="locked-design"
-        id="locked-design"
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-        width="1536"
-        height="1024"
-        alt="NextDungeon home page — Explore, Fight, Loot, Survive"
-        draggable="false"
-      />
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="NextDungeon home">
+      <span class="brand-icon">🧙</span>
+      <span class="brand-text"><b>NEXT</b><strong>DUNGEON</strong></span>
+    </a>
 
-      <!-- Invisible interaction zones preserve the approved artwork exactly. -->
-      <a class="hotspot home-link" href="#home" aria-label="Home"></a>
-      <a class="hotspot nav-play-link" href="#demo" aria-label="Play Game"></a>
-      <a class="hotspot about-link" href="#" aria-label="About"></a>
-      <a class="hotspot leaderboard-link" href="#" aria-label="Leaderboard"></a>
-      <a class="hotspot contact-link" href="#" aria-label="Contact"></a>
-      <a class="hotspot play-now-link" href="#demo" aria-label="Play Now"></a>
-      <a class="hotspot hero-play-link" href="#demo" aria-label="Play Game"></a>
-      <button class="hotspot trailer-link" type="button" aria-label="Watch Trailer" data-message="Trailer will be connected in the next stage."></button>
-      <button class="hotspot demo-link" id="demo" type="button" aria-label="Play Demo" data-message="The playable 2D dungeon demo will be connected here next."></button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#home">⌂ Home</a>
+      <a href="#demo">🎮 Play Game</a>
+      <a href="#about">▣ About</a>
+      <a href="#leaderboard">🏆 Leaderboard</a>
+      <a href="#contact">✉ Contact</a>
+    </nav>
+
+    <a class="play-now" href="#demo">🎮 Play Now</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="NextDungeon game artwork">
+      <div class="hero-art art-window">
+        <img class="source-art hero-source" alt="NextDungeon dungeon scene" draggable="false" />
+      </div>
+      <div class="mobile-hero-actions">
+        <a class="primary-btn" href="#demo">▶ Play Game</a>
+        <button class="secondary-btn" type="button" data-message="Trailer will be connected in the next stage.">▣ Watch Trailer</button>
+      </div>
     </section>
+
+    <section class="features" aria-label="Game features">
+      <article><span>⚔️</span><div><b>EPIC BATTLES</b><small>Fight monsters &amp; bosses</small></div></article>
+      <article><span>🧰</span><div><b>HIDDEN LOOT</b><small>Find rare items</small></div></article>
+      <article><span>🗺️</span><div><b>MYSTIC DUNGEONS</b><small>Explore endless levels</small></div></article>
+      <article><span>❤️</span><div><b>LEVEL UP</b><small>Get stronger</small></div></article>
+    </section>
+
+    <section class="demo-section" id="demo">
+      <div class="demo-preview art-window">
+        <img class="source-art demo-source" alt="NextDungeon gameplay preview" draggable="false" />
+        <button class="preview-play" type="button" data-message="The playable 2D dungeon demo will be connected here next." aria-label="Play preview">▶</button>
+      </div>
+
+      <div class="demo-copy">
+        <h2>Play the Demo</h2>
+        <p>Jump into the dungeon and try our first playable demo. Defeat enemies, collect coins and reach the next level!</p>
+        <div class="controls">
+          <span><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd><small>Move</small></span>
+          <span><kbd>Z</kbd><small>Attack</small></span>
+          <span><kbd>X</kbd><small>Jump</small></span>
+          <span><kbd>C</kbd><small>Special</small></span>
+        </div>
+        <button class="demo-button" type="button" data-message="The playable 2D dungeon demo will be connected here next.">🎮 Play Demo</button>
+        <small class="browser-note">🌐 Runs in your browser — No download needed!</small>
+      </div>
+    </section>
+
+    <section class="simple-section" id="about"><h2>About NextDungeon</h2><p>A 2D browser adventure built around exploration, battles, loot and progression.</p></section>
+    <section class="simple-section" id="leaderboard"><h2>Leaderboard</h2><p>Player rankings will appear here when the game system is connected.</p></section>
+    <section class="simple-section" id="contact"><h2>Contact</h2><p>Community and support links will be added here.</p></section>
   </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#home"><span class="brand-icon">🧙</span><span class="brand-text"><b>NEXT</b><strong>DUNGEON</strong></span></a>
+    <nav><a href="#home">Home</a><a href="#demo">Play Game</a><a href="#about">About</a><a href="#leaderboard">Leaderboard</a><a href="#contact">Contact</a></nav>
+    <p>© 2026 NextDungeon. All rights reserved.</p>
+  </footer>
 
   <script src="assets/image-part-01.js"></script>
   <script src="assets/image-part-02.js"></script>
