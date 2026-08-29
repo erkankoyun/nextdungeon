@@ -11,69 +11,85 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="NextDungeon home">
-      <span class="brand-icon">🧙</span>
+      <span class="brand-mark">⚔</span>
       <span class="brand-text"><b>NEXT</b><strong>DUNGEON</strong></span>
     </a>
 
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <a class="active" href="#home">⌂ Home</a>
-      <a href="#demo">🎮 Play Game</a>
-      <a href="#about">▣ About</a>
-      <a href="#leaderboard">🏆 Leaderboard</a>
-      <a href="#contact">✉ Contact</a>
+      <a class="active" href="#home">Home</a>
+      <a href="play/">Play Game</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
     </nav>
 
-    <a class="play-now" href="#demo">🎮 Play Now</a>
+    <a class="play-now" href="play/">▶ Play Now</a>
   </header>
 
   <main>
     <section class="hero" id="home" aria-label="NextDungeon game artwork">
-      <div class="hero-art art-window">
+      <div class="hero-art">
         <img class="source-art hero-source" alt="NextDungeon dungeon scene" draggable="false" />
+        <div class="hero-shade" aria-hidden="true"></div>
       </div>
-      <div class="mobile-hero-actions">
-        <a class="primary-btn" href="#demo">▶ Play Game</a>
-        <button class="secondary-btn" type="button" data-message="Trailer will be connected in the next stage.">▣ Watch Trailer</button>
+
+      <div class="hero-actions">
+        <a class="primary-btn" href="play/">▶ Play Game</a>
+        <a class="secondary-btn" href="#features">Explore Features</a>
       </div>
     </section>
 
-    <section class="features" aria-label="Game features">
-      <article><span>⚔️</span><div><b>EPIC BATTLES</b><small>Fight monsters &amp; bosses</small></div></article>
-      <article><span>🧰</span><div><b>HIDDEN LOOT</b><small>Find rare items</small></div></article>
-      <article><span>🗺️</span><div><b>MYSTIC DUNGEONS</b><small>Explore endless levels</small></div></article>
-      <article><span>❤️</span><div><b>LEVEL UP</b><small>Get stronger</small></div></article>
+    <section class="features" id="features" aria-label="Game features">
+      <article><span>⚔️</span><div><b>EPIC BATTLES</b><small>Fight monsters and bosses</small></div></article>
+      <article><span>🧰</span><div><b>HIDDEN LOOT</b><small>Discover rare items</small></div></article>
+      <article><span>🗺️</span><div><b>MYSTIC DUNGEONS</b><small>Explore dangerous levels</small></div></article>
+      <article><span>❤️</span><div><b>LEVEL UP</b><small>Grow stronger as you play</small></div></article>
     </section>
 
     <section class="demo-section" id="demo">
-      <div class="demo-preview art-window">
+      <div class="demo-preview">
         <img class="source-art demo-source" alt="NextDungeon gameplay preview" draggable="false" />
-        <button class="preview-play" type="button" data-message="The playable 2D dungeon demo will be connected here next." aria-label="Play preview">▶</button>
+        <a class="preview-play" href="play/" aria-label="Play NextDungeon demo">▶</a>
       </div>
 
       <div class="demo-copy">
-        <h2>Play the Demo</h2>
-        <p>Jump into the dungeon and try our first playable demo. Defeat enemies, collect coins and reach the next level!</p>
-        <div class="controls">
-          <span><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd><small>Move</small></span>
+        <span class="eyebrow">PLAY IN YOUR BROWSER</span>
+        <h2>Enter the Dungeon</h2>
+        <p>Fight enemies, collect coins, jump across platforms and reach the portal. No download required.</p>
+
+        <div class="controls" aria-label="Game controls">
+          <span><kbd>←</kbd><kbd>→</kbd><small>Move</small></span>
           <span><kbd>Z</kbd><small>Attack</small></span>
           <span><kbd>X</kbd><small>Jump</small></span>
-          <span><kbd>C</kbd><small>Special</small></span>
         </div>
-        <button class="demo-button" type="button" data-message="The playable 2D dungeon demo will be connected here next.">🎮 Play Demo</button>
-        <small class="browser-note">🌐 Runs in your browser — No download needed!</small>
+
+        <a class="demo-button" href="play/">🎮 Play Demo</a>
+        <small class="browser-note">Works on desktop, iPad and iPhone.</small>
       </div>
     </section>
 
-    <section class="simple-section" id="about"><h2>About NextDungeon</h2><p>A 2D browser adventure built around exploration, battles, loot and progression.</p></section>
-    <section class="simple-section" id="leaderboard"><h2>Leaderboard</h2><p>Player rankings will appear here when the game system is connected.</p></section>
-    <section class="simple-section" id="contact"><h2>Contact</h2><p>Community and support links will be added here.</p></section>
+    <section class="about-section" id="about">
+      <div>
+        <span class="eyebrow">ABOUT THE GAME</span>
+        <h2>Explore. Fight. Loot. Survive.</h2>
+      </div>
+      <p>NextDungeon is a 2D browser adventure focused on dungeon exploration, combat, loot and character progression. The current build is an early playable demo, and the world will grow with new enemies, maps, bosses and abilities.</p>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div>
+        <span class="eyebrow">READY?</span>
+        <h2>Your next dungeon is waiting.</h2>
+      </div>
+      <a class="primary-btn" href="play/">▶ Start Playing</a>
+    </section>
   </main>
 
   <footer>
-    <a class="brand footer-brand" href="#home"><span class="brand-icon">🧙</span><span class="brand-text"><b>NEXT</b><strong>DUNGEON</strong></span></a>
-    <nav><a href="#home">Home</a><a href="#demo">Play Game</a><a href="#about">About</a><a href="#leaderboard">Leaderboard</a><a href="#contact">Contact</a></nav>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">⚔</span><span class="brand-text"><b>NEXT</b><strong>DUNGEON</strong></span></a>
+    <nav><a href="#home">Home</a><a href="play/">Play Game</a><a href="#about">About</a><a href="#features">Features</a></nav>
     <p>© 2026 NextDungeon. All rights reserved.</p>
   </footer>
 
