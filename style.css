@@ -61,7 +61,7 @@ footer nav{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}footer na
 .modal-shell.open{display:grid}
 .modal-backdrop{position:absolute;inset:0;background:rgba(0,4,14,.84);backdrop-filter:blur(12px)}
 .registration-card,.trailer-card{position:relative;z-index:2;width:min(100%,520px);border:1px solid #2d5f99;border-radius:22px;background:linear-gradient(180deg,#07172f,#030b1c);box-shadow:0 40px 110px #000c}
-.registration-card{padding:34px}
+.registration-card{padding:34px;max-height:calc(100dvh - 36px);overflow:auto}
 .mini-logo{font-size:13px;font-weight:950;letter-spacing:1.5px;margin-bottom:22px}.mini-logo span{color:#ffad14}
 .registration-card h2{font-size:clamp(30px,5vw,44px);line-height:1;margin:0 0 12px}
 .register-intro{color:#aebed9;line-height:1.55;margin:0 0 24px}
