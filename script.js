@@ -76,13 +76,8 @@ document.querySelectorAll('[data-open-register]').forEach((button) => {
   button.addEventListener('click', openRegistration);
 });
 
-if (!profile) {
-  window.addEventListener('load', () => {
-    window.setTimeout(openRegistration, 250);
-  });
-} else {
-  updateAccountButtons();
-}
+// Always show the homepage first. Registration opens only after the user chooses Create Account.
+updateAccountButtons();
 
 function showToast(message) {
   if (!welcomeToast) return;
