@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#020817" />
-  <meta name="description" content="NextDungeon — Explore, Fight, Loot, Survive." />
+  <meta name="description" content="NextDungeon — Choose your class. Enter the dungeon." />
   <title>NextDungeon</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -19,13 +19,13 @@
 
     <nav class="main-nav" aria-label="Main navigation">
       <a class="active" href="#home">Home</a>
-      <a href="play/">Play Game</a>
-      <a href="#about">About</a>
+      <a href="#trailer">Trailer</a>
       <a href="#features">Features</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="play-now" href="play/">▶ Play Now</a>
+    <button class="play-now account-cta" type="button" data-open-register>Create Account</button>
   </header>
 
   <main>
@@ -33,40 +33,39 @@
       <div class="hero-art">
         <img class="source-art hero-source" alt="NextDungeon dungeon scene" draggable="false" />
         <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-title">
+          <span>ENTER THE DARK</span>
+          <h1>YOUR NEXT DUNGEON<br />STARTS HERE.</h1>
+          <p>Create your account, choose your class and build your legend.</p>
+        </div>
       </div>
 
       <div class="hero-actions">
-        <a class="primary-btn" href="play/">▶ Play Game</a>
-        <a class="secondary-btn" href="#features">Explore Features</a>
+        <button class="primary-btn account-cta" type="button" data-open-register>Create Account</button>
+        <button class="secondary-btn" type="button" data-open-trailer>▶ Watch Trailer</button>
       </div>
     </section>
 
     <section class="features" id="features" aria-label="Game features">
-      <article><span>⚔️</span><div><b>EPIC BATTLES</b><small>Fight monsters and bosses</small></div></article>
-      <article><span>🧰</span><div><b>HIDDEN LOOT</b><small>Discover rare items</small></div></article>
-      <article><span>🗺️</span><div><b>MYSTIC DUNGEONS</b><small>Explore dangerous levels</small></div></article>
-      <article><span>❤️</span><div><b>LEVEL UP</b><small>Grow stronger as you play</small></div></article>
+      <article><span>⚔️</span><div><b>TACTICAL COMBAT</b><small>Build a fighting style around your class</small></div></article>
+      <article><span>🧰</span><div><b>RARE LOOT</b><small>Find gear, resources and upgrades</small></div></article>
+      <article><span>🗺️</span><div><b>DANGEROUS DUNGEONS</b><small>Explore deeper and more difficult zones</small></div></article>
+      <article><span>🧬</span><div><b>CHARACTER PROGRESSION</b><small>Grow stronger and shape your build</small></div></article>
     </section>
 
-    <section class="demo-section" id="demo">
-      <div class="demo-preview">
-        <img class="source-art demo-source" alt="NextDungeon gameplay preview" draggable="false" />
-        <a class="preview-play" href="play/" aria-label="Play NextDungeon demo">▶</a>
+    <section class="trailer-section" id="trailer">
+      <div class="trailer-preview">
+        <img class="source-art trailer-source" alt="NextDungeon official trailer preview" draggable="false" />
+        <div class="trailer-overlay"></div>
+        <button class="trailer-play" type="button" data-open-trailer aria-label="Watch NextDungeon trailer">▶</button>
+        <div class="trailer-badge">OFFICIAL PREVIEW</div>
       </div>
 
-      <div class="demo-copy">
-        <span class="eyebrow">PLAY IN YOUR BROWSER</span>
-        <h2>Enter the Dungeon</h2>
-        <p>Fight enemies, collect coins, jump across platforms and reach the portal. No download required.</p>
-
-        <div class="controls" aria-label="Game controls">
-          <span><kbd>←</kbd><kbd>→</kbd><small>Move</small></span>
-          <span><kbd>Z</kbd><small>Attack</small></span>
-          <span><kbd>X</kbd><small>Jump</small></span>
-        </div>
-
-        <a class="demo-button" href="play/">🎮 Play Demo</a>
-        <small class="browser-note">Works on desktop, iPad and iPhone.</small>
+      <div class="trailer-copy">
+        <span class="eyebrow">WATCH THE TRAILER</span>
+        <h2>See what waits below.</h2>
+        <p>A short cinematic preview of the world, the danger and the five classes that will define how you survive NextDungeon.</p>
+        <button class="trailer-button" type="button" data-open-trailer>▶ Play Trailer</button>
       </div>
     </section>
 
@@ -75,23 +74,79 @@
         <span class="eyebrow">ABOUT THE GAME</span>
         <h2>Explore. Fight. Loot. Survive.</h2>
       </div>
-      <p>NextDungeon is a 2D browser adventure focused on dungeon exploration, combat, loot and character progression. The current build is an early playable demo, and the world will grow with new enemies, maps, bosses and abilities.</p>
+      <p>NextDungeon is a browser-first dungeon RPG in development. Players will create an account, choose a class, build a character and progress through dangerous dungeons filled with enemies, loot, upgrades and increasingly difficult encounters.</p>
     </section>
 
     <section class="cta-section" id="contact">
       <div>
         <span class="eyebrow">READY?</span>
-        <h2>Your next dungeon is waiting.</h2>
+        <h2>Create your account. Your class comes next.</h2>
       </div>
-      <a class="primary-btn" href="play/">▶ Start Playing</a>
+      <button class="primary-btn account-cta" type="button" data-open-register>Create Account</button>
     </section>
   </main>
 
   <footer>
     <a class="brand footer-brand" href="#home"><span class="brand-mark">⚔</span><span class="brand-text"><b>NEXT</b><strong>DUNGEON</strong></span></a>
-    <nav><a href="#home">Home</a><a href="play/">Play Game</a><a href="#about">About</a><a href="#features">Features</a></nav>
+    <nav><a href="#home">Home</a><a href="#trailer">Trailer</a><a href="#features">Features</a><a href="#about">About</a></nav>
     <p>© 2026 NextDungeon. All rights reserved.</p>
   </footer>
+
+  <div class="modal-shell registration-modal" id="register-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <section class="registration-card" role="dialog" aria-modal="true" aria-labelledby="register-title">
+      <div class="mini-logo">NEXT <span>DUNGEON</span></div>
+      <span class="eyebrow">CREATE YOUR ACCOUNT</span>
+      <h2 id="register-title">Begin your descent.</h2>
+      <p class="register-intro">Register first. Character creation will be the next step.</p>
+
+      <form id="register-form" novalidate>
+        <label>
+          Username
+          <input id="register-username" name="username" type="text" minlength="3" maxlength="20" autocomplete="username" placeholder="Dungeon name" required />
+        </label>
+        <label>
+          Email
+          <input id="register-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Password
+          <input id="register-password" name="password" type="password" minlength="8" autocomplete="new-password" placeholder="At least 8 characters" required />
+        </label>
+        <label>
+          Confirm Password
+          <input id="register-password-confirm" name="password_confirmation" type="password" minlength="8" autocomplete="new-password" placeholder="Repeat password" required />
+        </label>
+        <p class="form-error" id="register-error" aria-live="polite"></p>
+        <button class="primary-btn register-submit" type="submit">Create Account</button>
+      </form>
+
+      <small class="account-preview-note">Account preview: your username and email are saved only on this device until the secure database is connected. Your password is never stored in the browser.</small>
+    </section>
+  </div>
+
+  <div class="modal-shell trailer-modal" id="trailer-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-trailer></div>
+    <section class="trailer-card" role="dialog" aria-modal="true" aria-label="NextDungeon trailer">
+      <button class="modal-close" type="button" data-close-trailer aria-label="Close trailer">✕</button>
+      <div class="trailer-stage">
+        <img class="source-art trailer-stage-art" alt="" draggable="false" />
+        <div class="trailer-stage-shade"></div>
+        <div class="trailer-frame" id="trailer-frame">
+          <span id="trailer-kicker">NEXTDUNGEON</span>
+          <strong id="trailer-headline">ENTER THE DUNGEON</strong>
+          <small id="trailer-subline">Every descent changes the fight.</small>
+        </div>
+        <div class="trailer-progress"><span id="trailer-progress-bar"></span></div>
+      </div>
+      <div class="trailer-controls">
+        <button id="trailer-replay" type="button">↻ Replay</button>
+        <span id="trailer-time">0:00 / 0:15</span>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="welcome-toast" role="status" aria-live="polite"></div>
 
   <script src="assets/image-part-01.js"></script>
   <script src="assets/image-part-02.js"></script>
