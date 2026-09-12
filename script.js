@@ -63,6 +63,11 @@ function updateAccountButtons() {
 }
 
 function openRegistration() {
+  if (profile?.username) {
+    showToast(`Account preview: ${profile.username}`);
+    return;
+  }
+
   setModalState(registerModal, true);
   setTimeout(() => usernameInput?.focus(), 50);
 }
@@ -156,9 +161,13 @@ const trailerSlides = [
 
 let trailerTimer = null;
 let trailerStartedAt = 0;
+let trailerFrameIndex = -1;
 const trailerDuration = 15000;
 
 function renderTrailerFrame(index) {
+  if (index === trailerFrameIndex) return;
+  trailerFrameIndex = index;
+
   const slide = trailerSlides[index] || trailerSlides[0];
   trailerKicker.textContent = slide.kicker;
   trailerHeadline.textContent = slide.headline;
@@ -179,6 +188,7 @@ function stopTrailer() {
 function startTrailer() {
   stopTrailer();
   trailerStartedAt = Date.now();
+  trailerFrameIndex = -1;
   renderTrailerFrame(0);
   trailerProgressBar.style.width = '0%';
   trailerTime.textContent = '0:00 / 0:15';
